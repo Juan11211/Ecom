@@ -27,7 +27,9 @@ const TopButton = styled.button`
   background-color: ${(props) => props.type === 'filled' ? 'black' : "transparent"}
   color: ${(props) => props.type === 'filled' && 'white'}`
 
-const Bottom = styled.div``
+const Bottom = styled.div`
+  display: flex;
+  justify-content: space-between;`
 
 const TopTexts = styled.div``
 
@@ -36,6 +38,14 @@ const TopText = styled.span`
   margin: 0px 10px;
   cursor: pointer;`
 
+  const Info = styled.div`
+    flex: 3;
+    `
+
+  const Summary = styled.div`
+  flex: 1;`
+
+  const Product = styled.div``
 function Cart() {
   return (
     <Container>
@@ -54,7 +64,17 @@ function Cart() {
             Checkout Now
           </TopButton>
         </Top>        
-        <Bottom></Bottom>
+        <Bottom>
+          <Info>
+            <Product>
+              <ProductDetail>
+                <Image />
+              </ProductDetail>
+              <ProductPrice></ProductPrice>
+            </Product>
+          </Info>
+          <Summary>sum</Summary>
+        </Bottom>
         </Wrapper>
     <Footer />
       
